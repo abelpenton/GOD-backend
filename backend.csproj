@@ -20,5 +20,12 @@
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Player\" />
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Game\" />
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Round\" />
+    <Folder Include="src\GOD.BussineServices\Core\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\UnitOfWork\" />
+    <Folder Include="src\GOD.BussineServices\Services\" />
+    <Folder Include="src\GOD.BussineServices\Extentions\" />
+    <Folder Include="src\GOD.BussineServices\Services\Game\" />
+    <Folder Include="src\GOD.BussineServices\Services\Player\" />
+    <Folder Include="src\GOD.BussineServices\Services\Round\" />
   </ItemGroup>
 </Project>

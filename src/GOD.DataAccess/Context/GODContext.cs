@@ -16,17 +16,17 @@ namespace backend.src.GOD.DataAccess.Context
 
         public DbSet<Round> Rounds { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
 
-            builder.Entity<Round>()
+            modelBuilder.Entity<Round>()
                 .HasOne(r => r.Game)
                 .WithMany(g => g.Rounds)
                 .HasForeignKey(r => r.GameId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.Entity<Player>()
+            modelBuilder.Entity<Player>()
               .HasIndex(p => p.PlayerName)
               .IsUnique();
         }

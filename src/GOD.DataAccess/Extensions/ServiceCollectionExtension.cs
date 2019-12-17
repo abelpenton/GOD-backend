@@ -2,6 +2,8 @@
 using backend.src.GOD.DataAccess.Repositories.GODRepositories.Game;
 using backend.src.GOD.DataAccess.Repositories.GODRepositories.Player;
 using backend.src.GOD.DataAccess.Repositories.GODRepositories.Round;
+using backend.src.GOD.DataAccess.Repositories.UnitOfWork;
+
 namespace backend.src.GOD.DataAccess.Extensions
 {
     /// <summary>
@@ -19,6 +21,7 @@ namespace backend.src.GOD.DataAccess.Extensions
             service.AddScoped<IPlayerRepository, PlayerRepository>();
             service.AddScoped<IGameRepository, GameRepository>();
             service.AddScoped<IRoundRepository, RoundRepository>();
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

@@ -10,6 +10,6 @@ namespace backend.src.GOD.Domain.Models
 
         public int PlayerNumber { get; set; }
 
-        public int NumberOfRoundWinner { get; set; } = 0;
+        public int NumberOfRoundWinner { get; set; };
     }
 }
