@@ -1,0 +1,60 @@
+﻿<Properties StartupConfiguration="{AFF78A4D-AF36-410B-9100-A19224F13AC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GOD.DataAccess/Repositories/GODRepositories/Round/RoundRepository.cs">
+    <Files>
+      <File FileName="src/GOD.DataAccess/Extensions/ServiceCollectionExtension.cs" Line="24" Column="44" />
+      <File FileName="src/GOD.DataAccess/Repositories/BaseRepository.cs" Line="275" Column="51" />
+      <File FileName="src/GOD.DataAccess/Repositories/IBaseRepository.cs" Line="161" Column="38" />
+      <File FileName="src/GOD.DataAccess/Repositories/IUnitOfWork.cs" Line="8" Column="6" />
+      <File FileName="src/GOD.DataAccess/Repositories/IValueRepository.cs" Line="7" Column="46" />
+      <File FileName="src/GOD.Domain/Core/Entity.cs" Line="4" Column="49" />
+      <File FileName="src/GOD.Domain/Models/Player.cs" Line="8" Column="28" />
+      <File FileName="src/GOD.Domain/Models/Move.cs" Line="6" Column="18" />
+      <File FileName="src/GOD.Domain/Models/Round.cs" Line="16" Column="28" />
+      <File FileName="src/GOD.Domain/Models/Game.cs" Line="22" Column="1" />
+      <File FileName="src/GOD.DataAccess/Context/GODContext.cs" Line="19" Column="71" />
+      <File FileName="appsettings.json" Line="3" Column="57" />
+      <File FileName="Startup.cs" Line="33" Column="90" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="src/GOD.DataAccess/Repositories/Core/BaseRepository.cs" Line="7" Column="30" />
+      <File FileName="src/GOD.DataAccess/Repositories/Core/IBaseRepository.cs" Line="7" Column="35" />
+      <File FileName="src/GOD.DataAccess/Repositories/Core/IUnitOfWork.cs" Line="1" Column="14" />
+      <File FileName="src/GOD.Domain/Core/ITrackableEntity.cs" Line="8" Column="9" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Player/PlayerRepository.cs" Line="7" Column="32" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Player/IPlayerRepository.cs" Line="1" Column="1" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Game/IGameRepository.cs" Line="5" Column="6" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Game/GameRepository.cs" Line="5" Column="23" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Round/IRoundRepository.cs" Line="5" Column="6" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Round/RoundRepository.cs" Line="4" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="backend" expanded="True">
+            <Node name="backend" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="GOD.DataAccess" expanded="True">
+                  <Node name="Extensions" expanded="True" />
+                  <Node name="Repositories" expanded="True">
+                    <Node name="Core" expanded="True" />
+                    <Node name="GODRepositories" expanded="True">
+                      <Node name="Round" expanded="True">
+                        <Node name="RoundRepository.cs" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.backend PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,9 @@
+/personal/UruIT-Code/backend/src/GOD.Domain/bin/Debug/netcoreapp2.2/GOD.Domain.deps.json
+/personal/UruIT-Code/backend/src/GOD.Domain/bin/Debug/netcoreapp2.2/GOD.Domain.dll
+/personal/UruIT-Code/backend/src/GOD.Domain/bin/Debug/netcoreapp2.2/GOD.Domain.pdb
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.csprojAssemblyReference.cache
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.csproj.CoreCompileInputs.cache
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.AssemblyInfoInputs.cache
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.AssemblyInfo.cs
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.dll
+/personal/UruIT-Code/backend/src/GOD.Domain/obj/Debug/netcoreapp2.2/GOD.Domain.pdb

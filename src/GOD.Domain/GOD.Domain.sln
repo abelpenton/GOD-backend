@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOD.Domain", "GOD.Domain.csproj", "{04F373D6-37DE-4A46-BB9C-F2E1D4AE2267}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04F373D6-37DE-4A46-BB9C-F2E1D4AE2267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F373D6-37DE-4A46-BB9C-F2E1D4AE2267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F373D6-37DE-4A46-BB9C-F2E1D4AE2267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F373D6-37DE-4A46-BB9C-F2E1D4AE2267}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

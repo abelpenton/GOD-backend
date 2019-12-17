@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj": {}
+  },
+  "projects": {
+    "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj",
+        "projectName": "GOD.Domain",
+        "projectPath": "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj",
+        "packagesPath": "/Users/abelpenton/.nuget/packages/",
+        "outputPath": "/personal/UruIT-Code/backend/src/GOD.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/abelpenton/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
