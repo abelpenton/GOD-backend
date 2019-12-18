@@ -18,7 +18,6 @@
     <Folder Include="src\GOD.Domain\Models\" />
     <Folder Include="src\GOD.DataAccess\Context\" />
     <Folder Include="src\GOD.DataAccess\Repositories\" />
-    <Folder Include="src\GOD.DataAccess\Extensions\" />
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\" />
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Player\" />
     <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Game\" />
@@ -26,7 +25,6 @@
     <Folder Include="src\GOD.BussineServices\Core\" />
     <Folder Include="src\GOD.DataAccess\Repositories\UnitOfWork\" />
     <Folder Include="src\GOD.BussineServices\Services\" />
-    <Folder Include="src\GOD.BussineServices\Extentions\" />
     <Folder Include="src\GOD.BussineServices\Services\Game\" />
     <Folder Include="src\GOD.BussineServices\Services\Player\" />
     <Folder Include="src\GOD.BussineServices\Services\Round\" />
@@ -38,6 +36,8 @@
 
   <ItemGroup>
     <ProjectReference Include="src\GOD.Api\GOD.Api.csproj" />
+    <ProjectReference Include="src\GOD.DataAccess\GOD.DataAccess.csproj" />
+    <ProjectReference Include="src\GOD.BussineServices\GOD.BussineServices.csproj" />
   </ItemGroup>
 
 </Project>

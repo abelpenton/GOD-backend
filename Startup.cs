@@ -12,8 +12,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using backend.src.GOD.DataAccess.Extensions;
-using backend.src.GOD.BussineServices.Extentions;
 using backend.src.GOD.Api.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -41,12 +39,19 @@ namespace backend
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDataAccessServices();
+            service.AddScoped<DbContext, GODDataContext>();
+            service.AddScoped<IPlayerRepository, PlayerRepository>();
+            service.AddScoped<IGameRepository, GameRepository>();
+            service.AddScoped<IRoundRepository, RoundRepository>();
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             services.AddDbContext<GODDataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddBussinesServices();
+            service.AddScoped<IGameService, GameService>();
+            service.AddScoped<IRoundService, RoundService>();
+            service.AddScoped<IPlayerService, PlayerService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
