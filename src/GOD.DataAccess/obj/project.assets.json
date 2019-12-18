@@ -949,6 +949,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "GOD.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/GOD.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GOD.Domain.dll": {}
+        }
       }
     }
   },
@@ -3650,11 +3660,17 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "GOD.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GOD.Domain/GOD.Domain.csproj",
+      "msbuildProject": "../GOD.Domain/GOD.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Dapper >= 2.0.30",
+      "GOD.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.2.1",
       "Microsoft.EntityFrameworkCore.Design >= 2.2.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.1",
@@ -3689,7 +3705,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj": {
+              "projectPath": "/personal/UruIT-Code/backend/src/GOD.Domain/GOD.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

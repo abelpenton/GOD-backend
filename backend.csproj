@@ -36,9 +36,4 @@
     <Folder Include="src\GOD.Api\Models\Player\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="src\GOD.Api\GOD.Api.csproj" />
-    <ProjectReference Include="src\GOD.BussineServices\GOD.BussineServices.csproj" />
-    <ProjectReference Include="src\GOD.DataAccess\GOD.DataAccess.csproj" />
-  </ItemGroup>
 </Project>
