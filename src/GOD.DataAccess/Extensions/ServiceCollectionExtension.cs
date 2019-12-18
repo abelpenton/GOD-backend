@@ -3,6 +3,8 @@ using backend.src.GOD.DataAccess.Repositories.GODRepositories.Game;
 using backend.src.GOD.DataAccess.Repositories.GODRepositories.Player;
 using backend.src.GOD.DataAccess.Repositories.GODRepositories.Round;
 using backend.src.GOD.DataAccess.Repositories.UnitOfWork;
+using backend.src.GOD.DataAccess.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.src.GOD.DataAccess.Extensions
 {
@@ -18,6 +20,7 @@ namespace backend.src.GOD.DataAccess.Extensions
     {
         public static void AddDataAccessServices(this IServiceCollection service)
         {
+            service.AddScoped<DbContext, GODDataContext>();
             service.AddScoped<IPlayerRepository, PlayerRepository>();
             service.AddScoped<IGameRepository, GameRepository>();
             service.AddScoped<IRoundRepository, RoundRepository>();

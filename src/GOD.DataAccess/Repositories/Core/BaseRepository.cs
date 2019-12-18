@@ -32,7 +32,7 @@ namespace backend.src.GOD.DataAccess.Repositories.Core
         /// Initializes a new instance of the <see cref="BaseRepository{TEntity, TKey}"/> class.
         /// </summary>
         /// <param name="dbContext">The implementation of <see cref="DbContext"/></param>
-        public BaseRepository(GODContext dbContext)
+        public BaseRepository(GODDataContext dbContext)
         {
             DbContext = dbContext;
             this.Entities = this.DbContext.Set<TEntity>();

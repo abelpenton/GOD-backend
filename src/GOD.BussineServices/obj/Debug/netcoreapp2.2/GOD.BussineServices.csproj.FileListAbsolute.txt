@@ -1,0 +1,4 @@
+/personal/UruIT-Code/backend/src/GOD.BussineServices/obj/Debug/netcoreapp2.2/GOD.BussineServices.csprojAssemblyReference.cache
+/personal/UruIT-Code/backend/src/GOD.BussineServices/obj/Debug/netcoreapp2.2/GOD.BussineServices.csproj.CoreCompileInputs.cache
+/personal/UruIT-Code/backend/src/GOD.BussineServices/obj/Debug/netcoreapp2.2/GOD.BussineServices.AssemblyInfoInputs.cache
+/personal/UruIT-Code/backend/src/GOD.BussineServices/obj/Debug/netcoreapp2.2/GOD.BussineServices.AssemblyInfo.cs

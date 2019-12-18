@@ -12158,6 +12158,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj",
+      "/personal/UruIT-Code/backend/src/GOD.BussineServices/GOD.BussineServices.csproj",
+      "/personal/UruIT-Code/backend/src/GOD.DataAccess/GOD.DataAccess.csproj",
       "AutoMapper >= 9.0.0",
       "Dapper >= 2.0.30",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -12195,7 +12198,17 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj": {
+              "projectPath": "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj"
+            },
+            "/personal/UruIT-Code/backend/src/GOD.BussineServices/GOD.BussineServices.csproj": {
+              "projectPath": "/personal/UruIT-Code/backend/src/GOD.BussineServices/GOD.BussineServices.csproj"
+            },
+            "/personal/UruIT-Code/backend/src/GOD.DataAccess/GOD.DataAccess.csproj": {
+              "projectPath": "/personal/UruIT-Code/backend/src/GOD.DataAccess/GOD.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12244,5 +12257,34 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for '/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for '/personal/UruIT-Code/backend/src/GOD.BussineServices/GOD.BussineServices.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "/personal/UruIT-Code/backend/src/GOD.BussineServices/GOD.BussineServices.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for '/personal/UruIT-Code/backend/src/GOD.DataAccess/GOD.DataAccess.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "/personal/UruIT-Code/backend/src/GOD.DataAccess/GOD.DataAccess.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

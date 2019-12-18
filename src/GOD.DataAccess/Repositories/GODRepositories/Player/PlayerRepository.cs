@@ -8,7 +8,7 @@ namespace backend.src.GOD.DataAccess.Repositories.GODRepositories.Player
 {
     public class PlayerRepository : BaseRepository<Domain.Models.Player, int>, IPlayerRepository
     {
-        public PlayerRepository(GODContext dbContext) : base(dbContext)
+        public PlayerRepository(GODDataContext dbContext) : base(dbContext)
         {
         }
 

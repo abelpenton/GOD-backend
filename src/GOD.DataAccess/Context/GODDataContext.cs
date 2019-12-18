@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.src.GOD.DataAccess.Context
 {
-    public class GODContext : DbContext
+    public class GODDataContext : DbContext
     {
-        public GODContext(DbContextOptions<GODContext> dbContext) : base(dbContext)
+        public GODDataContext(DbContextOptions<GODDataContext> dbContext) : base(dbContext)
         {
         }
 

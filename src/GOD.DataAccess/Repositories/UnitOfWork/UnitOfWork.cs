@@ -10,12 +10,12 @@ namespace backend.src.GOD.DataAccess.Repositories.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
 
-        public UnitOfWork(GODContext dbContext)
+        public UnitOfWork(GODDataContext dbContext)
         {
             DbContext = dbContext;
         }
 
-        public GODContext DbContext { get; set; }
+        public GODDataContext DbContext { get; set; }
 
         public void Dispose()
         {

@@ -1,0 +1,4 @@
+/personal/UruIT-Code/backend/src/GOD.Api/obj/Debug/netcoreapp2.2/GOD.Api.csprojAssemblyReference.cache
+/personal/UruIT-Code/backend/src/GOD.Api/obj/Debug/netcoreapp2.2/GOD.Api.csproj.CoreCompileInputs.cache
+/personal/UruIT-Code/backend/src/GOD.Api/obj/Debug/netcoreapp2.2/GOD.Api.AssemblyInfoInputs.cache
+/personal/UruIT-Code/backend/src/GOD.Api/obj/Debug/netcoreapp2.2/GOD.Api.AssemblyInfo.cs

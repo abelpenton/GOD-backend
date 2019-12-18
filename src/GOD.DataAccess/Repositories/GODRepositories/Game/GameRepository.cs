@@ -4,7 +4,7 @@ namespace backend.src.GOD.DataAccess.Repositories.GODRepositories.Game
 {
     public class GameRepository : BaseRepository<Domain.Models.Game, int>, IGameRepository
     {
-        public GameRepository(GODContext dbContext) : base(dbContext)
+        public GameRepository(GODDataContext dbContext) : base(dbContext)
         {
         }
     }

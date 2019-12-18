@@ -14,6 +14,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using backend.src.GOD.DataAccess.Extensions;
 using backend.src.GOD.BussineServices.Extentions;
+using backend.src.GOD.Api.Models;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
 
 namespace backend
 {
@@ -29,14 +32,23 @@ namespace backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<GODContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            var autoMapperConfiguration = new MapperConfiguration(cfg => { cfg.AddProfile(new MapperConfig()); });
+
+            var mapper = autoMapperConfiguration.CreateMapper();
+
+            services.AddSingleton(mapper);
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDataAccessServices();
 
+            services.AddDbContext<GODDataContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddBussinesServices();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

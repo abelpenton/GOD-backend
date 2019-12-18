@@ -4,7 +4,7 @@ namespace backend.src.GOD.DataAccess.Repositories.GODRepositories.Round
 {
     public class RoundRepository : BaseRepository<Domain.Models.Round, int>, IRoundRepository
     {
-        public RoundRepository(GODContext dbContext) : base(dbContext)
+        public RoundRepository(GODDataContext dbContext) : base(dbContext)
         {
         }
     }

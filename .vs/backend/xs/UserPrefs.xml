@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{AFF78A4D-AF36-410B-9100-A19224F13AC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GOD.Api/Models/Round/EditRoundDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GOD.DataAccess/Context/GODDataContext.cs">
     <Files>
-      <File FileName="src/GOD.DataAccess/Extensions/ServiceCollectionExtension.cs" Line="17" Column="4" />
+      <File FileName="src/GOD.DataAccess/Extensions/ServiceCollectionExtension.cs" Line="1" Column="1" />
       <File FileName="src/GOD.Domain/Core/Entity.cs" Line="4" Column="49" />
       <File FileName="src/GOD.Domain/Models/Player.cs" Line="13" Column="53" />
       <File FileName="src/GOD.Domain/Models/Move.cs" Line="1" Column="1" />
       <File FileName="src/GOD.Domain/Models/Round.cs" Line="17" Column="44" />
       <File FileName="src/GOD.Domain/Models/Game.cs" Line="14" Column="55" />
-      <File FileName="src/GOD.DataAccess/Context/GODContext.cs" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="3" Column="57" />
-      <File FileName="Startup.cs" Line="16" Column="50" />
+      <File FileName="src/GOD.DataAccess/Context/GODDataContext.cs" Line="9" Column="55" />
+      <File FileName="appsettings.json" Line="3" Column="60" />
+      <File FileName="Startup.cs" Line="35" Column="1" />
       <File FileName="appsettings.Development.json" Line="1" Column="1" />
       <File FileName="src/GOD.DataAccess/Repositories/Core/BaseRepository.cs" Line="1" Column="1" />
       <File FileName="src/GOD.DataAccess/Repositories/Core/IBaseRepository.cs" Line="7" Column="35" />
@@ -20,10 +20,10 @@
       <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Game/IGameRepository.cs" Line="5" Column="6" />
       <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Game/GameRepository.cs" Line="1" Column="1" />
       <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Round/IRoundRepository.cs" Line="5" Column="6" />
-      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Round/RoundRepository.cs" Line="5" Column="19" />
+      <File FileName="src/GOD.DataAccess/Repositories/GODRepositories/Round/RoundRepository.cs" Line="1" Column="1" />
       <File FileName="src/GOD.BussineServices/Core/IBaseBussineService.cs" Line="9" Column="70" />
       <File FileName="src/GOD.BussineServices/Core/BaseBussinesService.cs" Line="149" Column="56" />
-      <File FileName="src/GOD.DataAccess/Repositories/UnitOfWork/UnitOfWork.cs" Line="15" Column="35" />
+      <File FileName="src/GOD.DataAccess/Repositories/UnitOfWork/UnitOfWork.cs" Line="1" Column="1" />
       <File FileName="src/GOD.BussineServices/Services/Game/IGameService.cs" Line="1" Column="1" />
       <File FileName="src/GOD.BussineServices/Services/Game/GameService.cs" Line="10" Column="16" />
       <File FileName="src/GOD.BussineServices/obj/GOD.BussineServices.csproj.nuget.g.props" Line="1" Column="1" />
@@ -38,33 +38,22 @@
       <File FileName="src/GOD.Api/Models/Player/PlayerDto.cs" Line="10" Column="53" />
       <File FileName="src/GOD.Api/Models/Game/GameDto.cs" Line="1" Column="1" />
       <File FileName="src/GOD.Api/Models/Round/RoundDto.cs" Line="8" Column="31" />
-      <File FileName="src/GOD.Api/Models/MapperConfig.cs" Line="17" Column="44" />
-      <File FileName="src/GOD.Api/GameController.cs" Line="96" Column="1" />
+      <File FileName="src/GOD.Api/Models/MapperConfig.cs" Line="1" Column="1" />
+      <File FileName="src/GOD.Api/GameController.cs" Line="84" Column="70" />
       <File FileName="src/GOD.Api/Models/Game/NewGameDto.cs" Line="4" Column="28" />
-      <File FileName="src/GOD.Api/Models/Round/NewRoundDto.cs" Line="7" Column="40" />
-      <File FileName="src/GOD.Api/Models/Round/EditRoundDto.cs" Line="6" Column="20" />
+      <File FileName="src/GOD.Api/Models/Round/NewRoundDto.cs" Line="4" Column="18" />
+      <File FileName="src/GOD.Api/Models/Round/EditRoundDto.cs" Line="5" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="backend" expanded="True">
             <Node name="backend" expanded="True">
-              <Node name="Dependencies" expanded="True" />
               <Node name="src" expanded="True">
-                <Node name="GOD.Api" expanded="True">
-                  <Node name="Models" expanded="True">
-                    <Node name="Round" expanded="True">
-                      <Node name="EditRoundDto.cs" selected="True" />
-                    </Node>
+                <Node name="GOD.DataAccess" expanded="True">
+                  <Node name="Context" expanded="True">
+                    <Node name="GODDataContext.cs" selected="True" />
                   </Node>
-                </Node>
-                <Node name="GOD.BussineServices" expanded="True">
-                  <Node name="Services" expanded="True">
-                    <Node name="Round" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="GOD.Domain" expanded="True">
-                  <Node name="Models" expanded="True" />
                 </Node>
               </Node>
             </Node>
