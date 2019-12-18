@@ -16,7 +16,7 @@ namespace backend.src.GOD.DataAccess.Extensions
     ///     When a service for the DI will be used, this won't
     ///     be neccessary.
     /// </remarks>
-    public static class ServiceCollectionExtension
+    public static class ServiceCollectionDataAccessExtension
     {
         public static void AddDataAccessServices(this IServiceCollection service)
         {

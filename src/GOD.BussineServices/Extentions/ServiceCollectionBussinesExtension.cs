@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace backend.src.GOD.BussineServices.Extentions
 {
-    public static class ServiceCollectionExtension
+    public static class ServiceCollectionBussinesExtension
     {
         public static void AddBussinesServices(this IServiceCollection service)
         {
