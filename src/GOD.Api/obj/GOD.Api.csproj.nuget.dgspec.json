@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/personal/UruIT-Code/backend/backend.csproj": {}
+    "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj": {}
   },
   "projects": {
-    "/personal/UruIT-Code/backend/backend.csproj": {
+    "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/personal/UruIT-Code/backend/backend.csproj",
-        "projectName": "backend",
-        "projectPath": "/personal/UruIT-Code/backend/backend.csproj",
+        "projectUniqueName": "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj",
+        "projectName": "GOD.Api",
+        "projectPath": "/personal/UruIT-Code/backend/src/GOD.Api/GOD.Api.csproj",
         "packagesPath": "/Users/abelpenton/.nuget/packages/",
-        "outputPath": "/personal/UruIT-Code/backend/obj/",
+        "outputPath": "/personal/UruIT-Code/backend/src/GOD.Api/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -43,30 +43,11 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.30, )"
-            },
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "(, )"
             }
           },
           "imports": [

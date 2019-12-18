@@ -9,7 +9,7 @@ namespace backend.src.GOD.BussineServices.Services.Game
     {
         private IGameRepository Repository { get; set; }
 
-        private ILogger logger { get; set; } 
+        private ILogger logger { get; set; }
 
         public GameService(IGameRepository repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
         {

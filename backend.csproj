@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,5 +30,9 @@
     <Folder Include="src\GOD.BussineServices\Services\Game\" />
     <Folder Include="src\GOD.BussineServices\Services\Player\" />
     <Folder Include="src\GOD.BussineServices\Services\Round\" />
+    <Folder Include="src\GOD.Api\Models\" />
+    <Folder Include="src\GOD.Api\Models\Game\" />
+    <Folder Include="src\GOD.Api\Models\Round\" />
+    <Folder Include="src\GOD.Api\Models\Player\" />
   </ItemGroup>
 </Project>
