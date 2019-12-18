@@ -15,6 +15,14 @@ using Microsoft.Extensions.Options;
 using backend.src.GOD.Api.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using backend.src.GOD.DataAccess.Repositories.GODRepositories.Game;
+using backend.src.GOD.DataAccess.Repositories.GODRepositories.Player;
+using backend.src.GOD.DataAccess.Repositories.GODRepositories.Round;
+using backend.src.GOD.DataAccess.Repositories.UnitOfWork;
+
+using backend.src.GOD.BussineServices.Services.Game;
+using backend.src.GOD.BussineServices.Services.Player;
+using backend.src.GOD.BussineServices.Services.Round;
 
 namespace backend
 {
@@ -39,19 +47,19 @@ namespace backend
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            service.AddScoped<DbContext, GODDataContext>();
-            service.AddScoped<IPlayerRepository, PlayerRepository>();
-            service.AddScoped<IGameRepository, GameRepository>();
-            service.AddScoped<IRoundRepository, RoundRepository>();
-            service.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<DbContext, GODDataContext>();
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IGameRepository, GameRepository>();
+            services.AddScoped<IRoundRepository, RoundRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
             services.AddDbContext<GODDataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            service.AddScoped<IGameService, GameService>();
-            service.AddScoped<IRoundService, RoundService>();
-            service.AddScoped<IPlayerService, PlayerService>();
+            services.AddScoped<IGameService, GameService>();
+            services.AddScoped<IRoundService, RoundService>();
+            services.AddScoped<IPlayerService, PlayerService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
