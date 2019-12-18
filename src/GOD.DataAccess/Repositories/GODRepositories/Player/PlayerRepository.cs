@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Data;
+using System.Threading.Tasks;
 using backend.src.GOD.DataAccess.Context;
 using backend.src.GOD.DataAccess.Repositories.Core;
 using Dapper;
@@ -11,10 +12,23 @@ namespace backend.src.GOD.DataAccess.Repositories.GODRepositories.Player
         {
         }
 
-        public Task<Domain.Models.Player> FilterPlayerByNumber(int playerNumer)
+        public async Task<Domain.Models.Player> FilterPlayerByNumber(int playerNumer)
         {
-            //use Dapper here
-            return this.SingleOrDefaultAsync(p => p.PlayerNumber == playerNumer);
+            var connection = OpenConnection();
+
+            var sql = $@"SELECT TOP(1) * FROM Players WHERE PlayerNumber = @PN";
+
+            try
+            {
+                using (var query = connection.QuerySingleAsync<Domain.Models.Player>(sql, new { PN = playerNumer }))
+                {
+                    return await query;
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

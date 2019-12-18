@@ -385,15 +385,13 @@ namespace backend.src.GOD.DataAccess.Repositories.Core
 
         protected string ConnectionStringName { get; set; }
 
-        protected IDbConnection OpenConnection(out bool closeManually)
+        protected IDbConnection OpenConnection()
         {
             var conn = DbContext.Database.GetDbConnection();
-            closeManually = false;
             // Not sure here, should asume always opened??
             if (conn.State != ConnectionState.Open)
             {
                 conn.Open();
-                closeManually = true;
             }
 
             return conn;
