@@ -11,15 +11,12 @@ namespace backend.src.GOD.BussineServices.Services.Round
 {
     public class RoundService : BaseBussinesService<Domain.Models.Round, int>, IRoundService
     {
-        private IRoundRepository Repository { get; set; }
-
         private IPlayerService _playerService { get; set; }
 
         private IGameService _gameService { get; set; }
 
         public RoundService(IRoundRepository repository, IUnitOfWork unitOfWork, IPlayerService playerService, IGameService gameService) : base(repository, unitOfWork)
         {
-            Repository = repository;
             _playerService = playerService;
             _gameService = gameService;
         }
@@ -27,7 +24,7 @@ namespace backend.src.GOD.BussineServices.Services.Round
         public async Task<Domain.Models.Game> CompleteRound(Domain.Models.Round round, Move lastMove)
         {
             var playerWinnerNumber = Rules.GetWinner(round.Player1Move, lastMove);
-            var currentPlayerWinner = await _playerService.GetPlayerForNumber(playerWinnerNumber);
+            var currentPlayerWinner = await _playerService.GetPlayerByNumber(playerWinnerNumber);
             var winner = "";
 
             round.PlayerRoundWinnerName = currentPlayerWinner.PlayerName;

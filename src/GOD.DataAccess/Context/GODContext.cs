@@ -27,7 +27,7 @@ namespace backend.src.GOD.DataAccess.Context
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Player>()
-              .HasIndex(p => p.PlayerName)
+              .HasIndex(p => p.PlayerNumber)
               .IsUnique();
         }
     }

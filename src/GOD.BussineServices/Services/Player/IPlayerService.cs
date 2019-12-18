@@ -4,6 +4,6 @@ namespace backend.src.GOD.BussineServices.Services.Player
 {
     public interface IPlayerService : IBaseBussineService<Domain.Models.Player, int>
     {
-        Task<Domain.Models.Player> GetPlayerForNumber(int playerNumer);
+        Task<Domain.Models.Player> GetPlayerByNumber(int playerNumer);
     }
 }

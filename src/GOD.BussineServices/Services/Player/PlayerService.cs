@@ -16,9 +16,9 @@ namespace backend.src.GOD.BussineServices.Services.Player
             Repository = repository;
         }
 
-        public async Task<Domain.Models.Player> GetPlayerForNumber(int playerNumer)
+        public async Task<Domain.Models.Player> GetPlayerByNumber(int playerNumer)
         {
-            return await this.SingleOrDefaultAsync(p => p.PlayerNumber == playerNumer);
+            return await Repository.FilterPlayerByNumber(playerNumer);
         }
     }
 }
