@@ -6,14 +6,15 @@ using backend.src.GOD.Api.Models.Round;
 using backend.src.GOD.BussineServices.Services.Game;
 using backend.src.GOD.BussineServices.Services.Player;
 using backend.src.GOD.BussineServices.Services.Round;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
 namespace backend.src.GOD.Api
 {
+    [AllowAnonymous]
     [Route("api/v1/[controller]/[action]")]
-    [ApiController]
-    public class GameController : ControllerBase
+    public class GameController : Controller
     {
         protected IMapper _mapper { get; set; }
 
