@@ -36,8 +36,6 @@
 
   <ItemGroup>
     <ProjectReference Include="src\GOD.Api\GOD.Api.csproj" />
-    <ProjectReference Include="src\GOD.DataAccess\GOD.DataAccess.csproj" />
-    <ProjectReference Include="src\GOD.BussineServices\GOD.BussineServices.csproj" />
   </ItemGroup>
 
 </Project>

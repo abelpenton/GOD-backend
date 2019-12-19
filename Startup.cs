@@ -23,6 +23,7 @@ using backend.src.GOD.DataAccess.Repositories.UnitOfWork;
 using backend.src.GOD.BussineServices.Services.Game;
 using backend.src.GOD.BussineServices.Services.Player;
 using backend.src.GOD.BussineServices.Services.Round;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace backend
 {
@@ -53,9 +54,11 @@ namespace backend
             services.AddScoped<IRoundRepository, RoundRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            void MigrationAssembly(SqlServerDbContextOptionsBuilder x) => x.MigrationsAssembly("GOD.DataAccess..Migrations");
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<GODDataContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionString, MigrationAssembly));
 
             services.AddScoped<IGameService, GameService>();
             services.AddScoped<IRoundService, RoundService>();
