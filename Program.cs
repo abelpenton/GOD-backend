@@ -16,7 +16,7 @@ namespace backend
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             try
             {
@@ -29,8 +29,7 @@ namespace backend
                     //Do the migration asynchronously
                     myDbContext.Database.EnsureCreated();
                 }
-
-                await webHost.RunAsync();
+                webHost.Run();
             }
             finally
             {

@@ -24,6 +24,9 @@ using backend.src.GOD.BussineServices.Services.Game;
 using backend.src.GOD.BussineServices.Services.Player;
 using backend.src.GOD.BussineServices.Services.Round;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Swashbuckle.AspNetCore.Swagger;
+using System.Reflection;
+using System.IO;
 
 namespace backend
 {
@@ -65,6 +68,8 @@ namespace backend
             services.AddScoped<IPlayerService, PlayerService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "GOD Api", Version = "v1"}); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,8 +85,19 @@ namespace backend
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseHttpsRedirection();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GOD Api");
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            });
         }
     }
 }

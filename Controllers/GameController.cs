@@ -11,7 +11,6 @@ using Serilog;
 
 namespace backend.src.GOD.Api
 {
-    [Produces("application/json")]
     [Route("api/v1/[controller]/[action]")]
     [ApiController]
     public class GameController : ControllerBase
