@@ -49,11 +49,6 @@ namespace backend.src.GOD.Api
         [HttpPost]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {
-
-            Console.WriteLine("SDADASDSADASDASDSDA");
-            Console.WriteLine("SDADASDSADASDASDSDA");
-            Console.WriteLine("SDADASDSADASDASDSDA");
-            Console.WriteLine(newGame);
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -68,6 +63,11 @@ namespace backend.src.GOD.Api
                 PlayerName = newGame.Player2,
                 PlayerNumber = 2
             }));
+
+            Console.WriteLine("SDSDASDASDASD");
+            Console.WriteLine((await _playerService.GetPlayerByNumber(1)).PlayerName);
+            Console.WriteLine((await _playerService.GetPlayerByNumber(2)).PlayerName);
+            Console.WriteLine("SDSDASDASDASD");
 
             var game = await _gameService.AddAsync(_mapper.Map<GameDto, Domain.Models.Game>(new GameDto
             {
