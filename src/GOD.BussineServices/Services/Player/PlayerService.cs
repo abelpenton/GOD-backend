@@ -20,5 +20,14 @@ namespace backend.src.GOD.BussineServices.Services.Player
         {
             return await Repository.FilterPlayerByNumber(playerNumer);
         }
+
+        public async Task<Domain.Models.Player> AddPlayer(Domain.Models.Player player)
+        {
+            if (await base.ExistsAsync(p => p.PlayerNumber == player.PlayerNumber)){
+                await base.RemoveAsync(p => p.PlayerNumber == player.PlayerNumber);
+            }
+
+            return await base.AddAsync(player);
+        }
     }
 }

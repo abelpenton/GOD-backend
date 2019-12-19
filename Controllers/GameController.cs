@@ -52,22 +52,19 @@ namespace backend.src.GOD.Api
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            await _playerService.AddAsync(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
+
+            await _playerService.AddPlayer(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
             {
                 PlayerName = newGame.Player1,
                 PlayerNumber = 1
             }));
 
-            await _playerService.AddAsync(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
+            await _playerService.AddPlayer(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
             {
                 PlayerName = newGame.Player2,
                 PlayerNumber = 2
             }));
 
-            Console.WriteLine("SDSDASDASDASD");
-            Console.WriteLine((await _playerService.GetPlayerByNumber(1)).PlayerName);
-            Console.WriteLine((await _playerService.GetPlayerByNumber(2)).PlayerName);
-            Console.WriteLine("SDSDASDASDASD");
 
             var game = await _gameService.AddAsync(_mapper.Map<GameDto, Domain.Models.Game>(new GameDto
             {
@@ -77,6 +74,7 @@ namespace backend.src.GOD.Api
 
             return Ok(_mapper.Map<Domain.Models.Game, GameDto>(game));
         }
+
 
         [HttpPost]
         public async Task<IActionResult> NewRound([FromBody] NewRoundDto round)
