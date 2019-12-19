@@ -37,8 +37,6 @@ namespace backend.src.GOD.Api
 
 
         [HttpGet("{player}")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
         public async Task<IActionResult> GetPlayer([FromRoute] int player)
         {
             if (!ModelState.IsValid)
@@ -49,11 +47,13 @@ namespace backend.src.GOD.Api
 
 
         [HttpPost]
-        [ProducesResponseType(201)]
-        [ProducesResponseType(400)]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {
 
+            Console.WriteLine("SDADASDSADASDASDSDA");
+            Console.WriteLine("SDADASDSADASDASDSDA");
+            Console.WriteLine("SDADASDSADASDASDSDA");
+            Console.WriteLine(newGame);
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -79,8 +79,6 @@ namespace backend.src.GOD.Api
         }
 
         [HttpPost]
-        [ProducesResponseType(201)]
-        [ProducesResponseType(400)]
         public async Task<IActionResult> NewRound([FromBody] NewRoundDto round)
         {
             if (!ModelState.IsValid)
@@ -90,8 +88,6 @@ namespace backend.src.GOD.Api
         }
 
         [HttpPut("{id}")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
         public async Task<IActionResult> UpdateRound([FromRoute] int id, [FromBody] EditRoundDto round)
         {
             if (!ModelState.IsValid)

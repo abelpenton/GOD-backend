@@ -54,7 +54,7 @@ namespace backend
             services.AddScoped<IRoundRepository, RoundRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            void MigrationAssembly(SqlServerDbContextOptionsBuilder x) => x.MigrationsAssembly("GOD.DataAccess..Migrations");
+            void MigrationAssembly(SqlServerDbContextOptionsBuilder x) => x.MigrationsAssembly("GOD.DataAccess.Migrations");
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<GODDataContext>(options =>

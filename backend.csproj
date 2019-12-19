@@ -28,14 +28,13 @@
     <Folder Include="src\GOD.BussineServices\Services\Game\" />
     <Folder Include="src\GOD.BussineServices\Services\Player\" />
     <Folder Include="src\GOD.BussineServices\Services\Round\" />
-    <Folder Include="src\GOD.Api\Models\" />
-    <Folder Include="src\GOD.Api\Models\Game\" />
-    <Folder Include="src\GOD.Api\Models\Round\" />
-    <Folder Include="src\GOD.Api\Models\Player\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="src\GOD.Api\GOD.Api.csproj" />
+    <ProjectReference Include="src\GOD.BussineServices\GOD.BussineServices.csproj" />
   </ItemGroup>
+
 
 </Project>
