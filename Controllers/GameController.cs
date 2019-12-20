@@ -7,12 +7,14 @@ using backend.src.GOD.BussineServices.Services.Game;
 using backend.src.GOD.BussineServices.Services.Player;
 using backend.src.GOD.BussineServices.Services.Round;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
 namespace backend.src.GOD.Api
 {
     [AllowAnonymous]
+    [EnableCors("_myAllowSpecificOrigins")]
     [Route("api/v1/[controller]/[action]")]
     public class GameController : Controller
     {
@@ -58,9 +60,11 @@ namespace backend.src.GOD.Api
         [HttpPost]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {
+            Console.WriteLine("asdasdasdasdasdasdadasdasdda");
+            Console.WriteLine(newGame);
             if (!ModelState.IsValid)
                 return BadRequest();
-                
+
 
             await _playerService.AddPlayer(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
             {

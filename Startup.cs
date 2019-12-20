@@ -39,6 +39,8 @@ namespace backend
 
         public IConfiguration Configuration { get; }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -69,6 +71,15 @@ namespace backend
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:8080").AllowAnyHeader();
+                });
+            });
+
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "GOD Api", Version = "v1"}); });
         }
 
@@ -90,6 +101,8 @@ namespace backend
             app.UseSwagger();
 
             app.UseHttpsRedirection();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseSwaggerUI(c =>
             {
