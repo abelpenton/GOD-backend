@@ -46,13 +46,21 @@ namespace backend.src.GOD.Api
             return Ok(_mapper.Map<Domain.Models.Player, PlayerDto>(await _playerService.GetPlayerByNumber(player)));
         }
 
+        [HttpGet("{gameId}")]
+        public async Task<IActionResult> GetGame([FromRoute] int gameId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            return Ok(_mapper.Map<Domain.Models.Game, GameDto>(await _gameService.SingleOrDefaultAsync(gameId)));
+        }
 
         [HttpPost]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
-
+                
 
             await _playerService.AddPlayer(_mapper.Map<PlayerDto, Domain.Models.Player>(new PlayerDto
             {
