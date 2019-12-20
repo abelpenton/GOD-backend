@@ -59,14 +59,14 @@ namespace backend.src.GOD.Api
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> GetStatics([FromBody] string playerName)
+        [HttpGet("{playerName}")]
+        public async Task<IActionResult> GetStatics([FromRoute] string playerName)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
 
             var statistics = await _gameService.Statistics(playerName);
-
+          
             return Ok(statistics.Select(g => _mapper.Map<Domain.Models.Game, GameDto>(g)));
 
         }

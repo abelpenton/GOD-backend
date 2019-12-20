@@ -16,13 +16,8 @@ namespace backend.src.GOD.Domain.Models
                 return 0;
 
             if (Math.Abs(player1Move - player2Move) == 1)
-            {
-                if (player1Move > player2Move)
-                    return 1;
+                return player1Move > player2Move ? 1 : 2;
 
-                return 2;
-
-            }
             return player1Move == Move.Rock ? 1 : 2;
         }
 
