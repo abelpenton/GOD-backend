@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using backend.src.GOD.Api.Models;
@@ -60,8 +61,6 @@ namespace backend.src.GOD.Api
         [HttpPost]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {
-            Console.WriteLine("asdasdasdasdasdasdadasdasdda");
-            Console.WriteLine(newGame);
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -105,9 +104,17 @@ namespace backend.src.GOD.Api
                 return BadRequest();
 
             var r = await _roundService.SingleOrDefaultAsync(id);
-            if(round != null)
+
+            if (r != null)
             {
-                return Ok(_mapper.Map<Domain.Models.Game, GameDto>(await _roundService.CompleteRound(r, (Domain.Models.Move)round.lastMove)));
+                var result = _mapper.Map<Domain.Models.Game, GameDto>(await _roundService.CompleteRound(r, (Domain.Models.Move)round.lastMove));
+
+                var roundsGame = (await _roundService.ReadAllAsync(ro => ro.GameId == result.Id)).ToList();
+
+
+                result.Rounds = roundsGame.Select(ro => _mapper.Map<Domain.Models.Round, RoundDto>(ro)).ToList();
+
+                return Ok(result);
             }
             return BadRequest();
         }

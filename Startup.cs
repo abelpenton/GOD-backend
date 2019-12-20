@@ -76,7 +76,7 @@ namespace backend
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:8080").AllowAnyHeader();
+                    builder.WithOrigins("http://localhost:8080").AllowAnyHeader().AllowAnyMethod();
                 });
             });
 

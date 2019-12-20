@@ -11,6 +11,6 @@ namespace backend.src.GOD.Api.Models
 
         public bool EndGame { get; set; }
 
-        public IEnumerable<RoundDto> Rounds { get; set; }
+        public List<RoundDto> Rounds { get; set; }
     }
 }
