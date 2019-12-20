@@ -1,7 +1,7 @@
 # Game of Drone Backend
 
 ## Summary
-Game of Drone is a web version of the famous game `Rock-Papper-Scissor` where two players trying to conquer each other. The backend version was implemented using the modern technologies and libraries: `.Net Core`, `Entity Framework Core`, `Dapper` and `Sql Server` for the database structure. The main idea in the implementation was build a `N-Layer` architecture with 4 layer to handle the all bussines logic, the data flow from `Entry Point` layer to `Domain` layer and return in the opositive direction. `N-Layer` architecture accompanied by good Desing Patterns like `Repository Pattern`,`UnitOfWork` and `Dependency Injection` made the backend code of Game of Drone reusable, cleaner and scalable. This game also contain a frontend version implemented with `ReactJs` and you can find it [here](https://github.com/abelpenton/GOD-frontend.git).
+Game of Drone is a web version of the famous game `Rock-Papper-Scissor` where two players try to conquer each other. The backend version is implemented using modern technologies and libraries like `.Net Core`, `Entity Framework Core`, `Dapper` and `Sql Server` for database structure. The main idea in the implementation is to build an `N-layer` architecture with 4 layers to handle the logic of the whole business, the data flows from the `Entry Point` layer to the `Domain` layer and return in the opposite direction. `N-Layer's` architecture accompanied by some design patterns such as `Repository Pattern`, `UnitOfWork` and `Dependency Injection` to make the Game of Drone code reusable, cleaner and scalable. This game also contains a user interface version implemented with `ReactJs` and it can be found [here](https://github.com/abelpenton/GOD-frontend.git).
 
 
 # Setup
@@ -14,11 +14,12 @@ Game of Drone is a web version of the famous game `Rock-Papper-Scissor` where tw
 
 ```
 
-## GOD Architecture
-In the `4-Layer` architecture of `Game of Drone` the data flow from one layer to other using `Dependency Injection` patterns. Read below to see each layer in the architecture.
+## GOD's Architecture
+In the `4-layer` architecture of `Game of Drone`, data flows from one layer to another using the `Dependency Injection` pattern. Below each layer is explained.
 
 ### Domain Layer:
-For the domain layer was used `DDD` priciple (OOP applied to business models). For a reusability code in Domain Layer two generic entities was implemented and each domain of the bussiness should implement this `Core` entities. Then in the `Models` folder we can find the models for Game of Drone game.
+The `DDD` principle (OOP applied to business models) was used for the domain layer. To reuse the code in the domain layer, two generic entities are implemented and each business domain implements them. Then, in the `Models` folder, you can find the models for the Game of Drone game.
+
 
 ```
 |_____GOD.Domain
@@ -33,8 +34,7 @@ For the domain layer was used `DDD` priciple (OOP applied to business models). F
 ```
 
 ### Data Access Layer:
-This layer have the responsability of handle the data from the database, for that task `Entity Framework` and `Dapper` was used.
-To model the database of `Game of Drone` we can see `Context.cs`, also we can find the `Repository Patter` for good desing practices and a better way to make database CRUD operations. Also a `Core` entities was implemented looking for reusability and scalable code.
+This layer has the responsibility of handling the data, for that task `Entity Framework` and `Dapper` are used. The model of the `Game of Drone` database can be found in `Context.cs`. You can find in the `Repository` implementation good design practices and a good way to do CRUD operations on the database. A `Core` entity was also implemented for reuse and scalable code.
 
 ```
 |_____GOD.DataAccess
@@ -60,7 +60,7 @@ To model the database of `Game of Drone` we can see `Context.cs`, also we can fi
 ```
 
 ### Bussines Layer:
-This layer have the responsability of make all bussiness logic and then use the repositories to access of data, here is where `Unit of Work` was used, the idea was shared the `Context` for every service and make the database transaction after each CRUD operation was done by the repositories in the service. As well as the other layer a `Core` entities was implemented for generic services.
+This layer has the responsibility of making all the business logic and then using the repositories to access the data, this is where the `Unit of Work` is used, the idea of the `Context` is to be shared to each service and to make a transaction to the database after a CRUD operation is performed by the repositories in the service. In addition to the other layer, central entities for generic services are implemented.
 
 ```
 |_____GOD.BussineServices
@@ -79,12 +79,13 @@ This layer have the responsability of make all bussiness logic and then use the 
 |___________RoundService.cs
 ```
 
-### Entry Point Layer
-This is the top of `N-Layer` architecture, here we can find the endpoint of `Game of Drone`, in this layer the request data are mapped then the services are called to get the bussines result depending of the input.
+### Entry Point Layer:
+This is the top of the `N-Layer` architecture, here you can find the `Game of Drone` endpoint, in this layer the application data is assigned and then the services are called to obtain the business results depending on the input.
 
 
 ## New Feature
-This is a guide add a new feature to the architecture. Keep in mind with this steps you only will be able to make standart operation for the `NewEntity`, if you will whish a new beheavior you will need implement by yourself.
+This is a guide to add new features to the architecture. Note that with these steps you can only perform a standard operation for `NewEntity`, if you want a new behavior you will need to implement it yourself.
+
 
 ### Domain Layer
 
@@ -122,7 +123,7 @@ This is a guide add a new feature to the architecture. Keep in mind with this st
 
 
 ## To Improve
->1- Build some `Unit Test` for the services(Though I config Swagger so you can test the current EndPoints https://localhost:5001/swagger/).
+>1- Build some Unit Test for the services(Swagger was configured to test the current EndPoints https://localhost:5001/swagger/).
 
 >2- Build a docker compose for a better setup.
 
