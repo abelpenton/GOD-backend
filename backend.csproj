@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\GOD.Domain\Core\" />
+    <Folder Include="src\GOD.Domain\Models\" />
+    <Folder Include="src\GOD.DataAccess\Context\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Player\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Game\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\GODRepositories\Round\" />
+    <Folder Include="src\GOD.BussineServices\Core\" />
+    <Folder Include="src\GOD.DataAccess\Repositories\UnitOfWork\" />
+    <Folder Include="src\GOD.BussineServices\Services\" />
+    <Folder Include="src\GOD.BussineServices\Services\Game\" />
+    <Folder Include="src\GOD.BussineServices\Services\Player\" />
+    <Folder Include="src\GOD.BussineServices\Services\Round\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="src\GOD.BussineServices\GOD.BussineServices.csproj" />
+  </ItemGroup>
+
+
+</Project>
