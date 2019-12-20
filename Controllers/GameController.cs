@@ -58,6 +58,19 @@ namespace backend.src.GOD.Api
             return Ok(_mapper.Map<Domain.Models.Game, GameDto>(await _gameService.SingleOrDefaultAsync(gameId)));
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> GetStatics([FromBody] string playerName)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var statistics = await _gameService.Statistics(playerName);
+
+            return Ok(statistics.Select(g => _mapper.Map<Domain.Models.Game, GameDto>(g)));
+
+        }
+
         [HttpPost]
         public async Task<IActionResult> NewGame([FromBody] NewGameDto newGame)
         {

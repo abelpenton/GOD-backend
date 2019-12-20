@@ -26,9 +26,8 @@ namespace backend.src.GOD.DataAccess.Context
                 .HasForeignKey(r => r.GameId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Player>()
-              .HasIndex(p => p.PlayerNumber)
-              .IsUnique();
+            modelBuilder.Entity<Game>()
+              .HasIndex(g => g.PlayerGameWinnerName);
         }
     }
 }
