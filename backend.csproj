@@ -29,8 +29,8 @@
     <Folder Include="src\GOD.BussineServices\Services\Game\" />
     <Folder Include="src\GOD.BussineServices\Services\Player\" />
     <Folder Include="src\GOD.BussineServices\Services\Round\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="src\GOD.EntryPoint\Controllers\" />
+    <Folder Include="src\GOD.EntryPoint\Models\" />
   </ItemGroup>
 
   <ItemGroup>
