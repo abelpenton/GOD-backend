@@ -75,7 +75,8 @@ namespace GOD.ServicesUnitTest
             }
 
         }
-        [Fact]
+
+        //[Fact]
         public async void CreateGames()
         {
             Random r = new Random();
