@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace GOD.IntegrationTests
 {
-    public class TestFixture<TStartup> : IDisposable
+    public class GODFixture<TStartup> : IDisposable
     {
         public static string GetProjectPath(string projectRelativePath, Assembly startupAssembly)
         {
@@ -40,7 +40,7 @@ namespace GOD.IntegrationTests
 
         private TestServer Server;
 
-        public TestFixture()
+        public GODFixture()
             : this(Path.Combine(""))
         {
         }
@@ -73,7 +73,7 @@ namespace GOD.IntegrationTests
             services.AddSingleton(manager);
         }
 
-        protected TestFixture(string relativeTargetProjectParentDir)
+        protected GODFixture(string relativeTargetProjectParentDir)
         {
             var startupAssembly = typeof(TStartup).GetTypeInfo().Assembly;
             var contentRoot = GetProjectPath(relativeTargetProjectParentDir, startupAssembly);

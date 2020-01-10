@@ -43,7 +43,7 @@ namespace GOD.ServicesUnitTest
             var connectionString = "Server=localhost;Database=GODData;User ID=sa;Password=Pass@123;Connect Timeout=30;Trusted_Connection=False;MultipleActiveResultSets=true";
 
             services.AddDbContext<GODDataContext>(options =>
-                options.UseSqlServer(connectionString, MigrationAssembly));
+                options.UseSqlServer(connectionString, MigrationAssembly).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
             services.AddDbContext<GODDataContext>();
 
@@ -76,19 +76,19 @@ namespace GOD.ServicesUnitTest
 
         }
 
-        //[Fact]
+        [Fact]
         public async void CreateGames()
         {
             Random r = new Random();
-            var gamesNumer = 0;
+            var numberGames = 0;
             Console.WriteLine("Creating 100 games");
             Console.WriteLine();
             Console.WriteLine();
-            while (gamesNumer < 100)
+            while (numberGames < 1)
             {
-                gamesNumer++;
+                numberGames++;
 
-                Console.WriteLine($"Start the {gamesNumer} game ...");
+                Console.WriteLine($"Start the {numberGames} game ...");
                 Console.WriteLine();
 
                 await CreatePlayer(1);
@@ -161,7 +161,7 @@ namespace GOD.ServicesUnitTest
 
                     if (game.EndGame)
                     {
-                        Console.WriteLine($"Game {gamesNumer} winner is {game.PlayerGameWinnerName}");
+                        Console.WriteLine($"Game {numberGames} winner is {game.PlayerGameWinnerName}");
                         Console.WriteLine();
                         break;
                     }
