@@ -3,10 +3,11 @@ using Xunit;
 
 namespace GOD.IntegrationTest
 {
-    public class GODIntegrationTest
+    public class HttpTest 
     {
+
         [Fact]
-        public void HttpTest()
+        public void Test()
         {
             Console.WriteLine("HOLAAA");
         }
